@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+from pathlib import Path
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -9,9 +10,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 # 1. 데이터 불러오기
 # =========================
 
-df = pd.read_csv(
-    'data/add2_cafe_customer_experience_profile.csv'
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+DATA_PATH = (
+    BASE_DIR
+    / 'data'
+    / 'add2_cafe_customer_experience_profile.csv'
 )
+
+df = pd.read_csv(DATA_PATH)
 
 
 # =========================
