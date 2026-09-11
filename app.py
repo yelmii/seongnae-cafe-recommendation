@@ -112,30 +112,30 @@ if st.button('카페 추천받기'):
         .head(5)
     )
 
-st.subheader('🎉 당신을 위한 성내동 카페 TOP 5')
-
-st.write('당신의 카페 선호도와 가장 잘 어울리는 곳이에요 ☕')
-
-# 순위별 카페 이름 출력
-medals = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣']
-
-for i, (_, row) in enumerate(recommendations.iterrows()):
-
-    cafe_name = row['name']
-
-    st.markdown(
-        f"""
-        <div style="
-            padding: 20px;
-            margin-bottom: 12px;
-            border-radius: 12px;
-            background-color: #F8F5F2;
-            border: 1px solid #E5DED8;
-            font-size: 22px;
-            font-weight: bold;
-        ">
-            {medals[i]} {cafe_name}
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.subheader('🎉 당신을 위한 성내동 카페 TOP 5')
+    
+    st.write('당신의 카페 선호도와 가장 잘 어울리는 곳이에요 ☕')
+    
+    # 순위별 카페 이름 출력
+    medals = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣']
+    
+    for i, (_, row) in enumerate(recommendations.iterrows()):
+    
+        cafe_name = row['name']
+    
+        st.markdown(
+            f"""
+            <div style="
+                padding: 20px;
+                margin-bottom: 12px;
+                border-radius: 12px;
+                background-color: #F8F5F2;
+                border: 1px solid #E5DED8;
+                font-size: 22px;
+                font-weight: bold;
+            ">
+                {medals[i]} {cafe_name}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
