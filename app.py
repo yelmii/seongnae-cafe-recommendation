@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # 1. 데이터 불러오기
 # =========================
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 
 DATA_PATH = (
     BASE_DIR
